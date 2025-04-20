@@ -1,6 +1,8 @@
 export class UserDto {
-  id?: string;
-  name?: string;
-  email?: string;
-  createdAt?: Date;
+  id!: number;
+  name!: string;
+  username!: string;
+  email!: string;
+  password!: string;
+  createdAt!: Date;
 }

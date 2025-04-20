@@ -7,15 +7,21 @@ import {
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn('uuid')
-  id?: string;
+  @PrimaryGeneratedColumn()
+  id!: number;
 
   @Column()
-  name?: string;
+  name!: string;
 
   @Column({ unique: true })
-  email?: string;
+  username!: string;
+
+  @Column({ unique: true })
+  email!: string;
+
+  @Column()
+  password!: string;
 
   @CreateDateColumn()
-  createdAt?: Date;
+  createdAt!: Date;
 }
